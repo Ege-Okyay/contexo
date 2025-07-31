@@ -1,0 +1,5 @@
+name: contexo-project
+
+include:
+  - contexo-db/docker-compose.yml
+  - contexo-cache/docker-compose.yml

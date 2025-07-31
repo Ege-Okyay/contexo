@@ -1,0 +1,19 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: contexo_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - contexo
+
+volumes:
+  redis_data:
+    name: contexo_redis_data
+
+networks:
+  contexo:
+    name: contexo-network
